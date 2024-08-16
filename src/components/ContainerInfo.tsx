@@ -4,9 +4,15 @@ import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 
 function ContainerInfo() {
-    const handleClick = () => {
+    const handleClickButton = () => {
         window.open('https://drive.google.com/file/d/15JbEVvTpVgd3_apUnNbPN9XBUDotp9P6/view?usp=drive_link', '_blank');
     };
+    const handleClickLinkedin = () => {
+        window.open('https://www.linkedin.com/in/iveth-vizcarra-desarrolladoraweb/', '_blank');
+    }
+    const handleClickGithub = () => {
+        window.open('https://github.com/viveth17', '_blank');
+    }
 
     return (
         <div className={styles.containerInfo}>
@@ -27,11 +33,11 @@ function ContainerInfo() {
                 <span className={styles.text5}>
                     Aprendiz de por vida
                 </span>
-                <button className={styles.buttonCv} onClick={handleClick}>DESCARGAR CV</button>
+                <button className={styles.buttonCv} onClick={handleClickButton}>DESCARGAR CV</button>
             </div>
             <div className={styles.containerIcons}>
-                <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
-                <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+                <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} onClick={handleClickLinkedin} />
+                <FontAwesomeIcon icon={faGithub} className={styles.icon} onClick={handleClickGithub} />
             </div >
         </div>
     )
