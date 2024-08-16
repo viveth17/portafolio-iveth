@@ -2,7 +2,12 @@ import styles from '../styles/ContainerInfo.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
+
 function ContainerInfo() {
+    const handleClick = () => {
+        window.open('https://drive.google.com/file/d/15JbEVvTpVgd3_apUnNbPN9XBUDotp9P6/view?usp=drive_link', '_blank');
+    };
+
     return (
         <div className={styles.containerInfo}>
             <img className={styles.photo} src="/woman.jpg" alt="Mujer Programadora" />
@@ -22,13 +27,14 @@ function ContainerInfo() {
                 <span className={styles.text5}>
                     Aprendiz de por vida
                 </span>
-                <button className={styles.buttonCv}>DESCARGAR CV</button>
+                <button className={styles.buttonCv} onClick={handleClick}>DESCARGAR CV</button>
             </div>
             <div className={styles.containerIcons}>
-            <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
-            <FontAwesomeIcon icon={faGithub} className={styles.icon} />
-        </div >
+                <FontAwesomeIcon icon={faLinkedinIn} className={styles.icon} />
+                <FontAwesomeIcon icon={faGithub} className={styles.icon} />
+            </div >
         </div>
     )
 }
 export default ContainerInfo
+
